@@ -11,11 +11,11 @@
 *.swp
 *.swo
 *~
+.DS_Store
 
 # Logs / temp files
 *.log
 *.tmp
-
 # Backup files
 *~
 
