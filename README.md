@@ -16,7 +16,7 @@ This program allows managing books in a library, including adding, listing, sear
 ---
 
 ## 📂 Project Structure
-
+```
 Library-Management/
 │
 ├── include/ # Header files
@@ -39,7 +39,7 @@ Library-Management/
 ├── README.md # Project documentation
 ├── LICENSE # MIT License
 └── .gitignore # Ignore build artifacts
-
+```
 
 ---
 
@@ -87,9 +87,7 @@ Run
 
  - User-friendly interface (better prompts, input validation)
 
----
 
-## 📜 License
+## License
 
-This project is licensed under the MIT License — see LICENSE
- for details.
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
