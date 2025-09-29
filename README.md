@@ -87,6 +87,8 @@ Run
 
  - User-friendly interface (better prompts, input validation)
 
+---
+
 ## 📜 License
 
 This project is licensed under the MIT License — see LICENSE
