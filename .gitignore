@@ -1,0 +1,24 @@
+# Build artifacts
+/build/
+*.o
+*.obj
+*.exe
+*.out
+*.a
+*.so
+
+# Editor temporary files
+*.swp
+*.swo
+*~
+
+# Logs / temp files
+*.log
+*.tmp
+
+# Backup files
+*~
+
+# Optional: ignore test binaries if you create tests/
+tests/*.o
+tests/*.exe

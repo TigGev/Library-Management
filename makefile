@@ -1,24 +1,21 @@
-COMPILER = g++
-FLAGS = -std=c++20 -stdlib=libc++
-SRC = librarySystem.cpp library.cpp book.cpp
-TARGET = libraryApp
-MAIN = libraryMain.cpp
-OBJ = $(SRC:.cpp=.o)
-LIB = mylib.a
+CXX = g++
+CXXFLAGS = -std=c++20 -Wall -Iinclude
 
+SRC = src/book.cpp src/library.cpp src/librarySystem.cpp
+OBJ = $(SRC:.cpp=.o)
+MAIN = src/main.cpp
+TARGET = build/LibraryApp
+LIB = build/libmylib.a
 
 all: $(TARGET)
 
+$(TARGET): $(OBJ)
+	@mkdir -p build
+	ar rcs $(LIB) $(OBJ)
+	$(CXX) $(CXXFLAGS) $(MAIN) -Lbuild -lmylib -o $(TARGET)
 
-$(TARGET) : $(OBJ)
-
-	ar rsc $(LIB) $(OBJ)
-	$(COMPILER) $(FLAGS) $(MAIN) -L. $(LIB) -o $(TARGET)
-
-%.o : %.cpp
-	$(COMPILER) $(FLAGS) -c $(SRC)
-
-
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 run:
 	./$(TARGET)
